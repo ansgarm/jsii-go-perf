@@ -1,0 +1,79 @@
+{
+  "name": "@cdktf/provider-aws",
+  "description": "Prebuilt aws Provider for Terraform CDK (cdktf)",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/hashicorp/cdktf-provider-aws.git"
+  },
+  "scripts": {
+    "build": "scripts/run-task build",
+    "bump": "scripts/run-task bump",
+    "clobber": "scripts/run-task clobber",
+    "compat": "scripts/run-task compat",
+    "compile": "jsii --silence-warnings=reserved-word",
+    "docgen": "scripts/run-task docgen",
+    "fetch": "scripts/run-task fetch",
+    "package": "scripts/run-task package",
+    "package:go": "scripts/run-task package:go",
+    "post-compile": "scripts/run-task post-compile",
+    "post-upgrade": "scripts/run-task post-upgrade",
+    "pre-compile": "scripts/run-task pre-compile",
+    "test": "jest --passWithNoTests",
+    "watch": "scripts/run-task watch"
+  },
+  "author": {
+    "name": "HashiCorp",
+    "url": "https://hashicorp.com",
+    "organization": true
+  },
+  "devDependencies": {
+    "@cdktf/provider-project": "^0.2.8",
+    "@types/node": "^14",
+    "cdktf": "^0.9",
+    "cdktf-cli": "^0.9",
+    "constructs": "^10.0.0",
+    "dot-prop": "^5.2.0",
+    "jsii": "^1.46.0",
+    "jsii-diff": "^1.52.1",
+    "jsii-docgen": "^1.8.110",
+    "npm-check-updates": "^12",
+    "standard-version": "^9",
+    "typescript": "^3.9.10",
+    "jsii-pacmak": "1.52.1"
+  },
+  "peerDependencies": {
+    "cdktf": "^0.9",
+    "constructs": "^10.0.0"
+  },
+  "keywords": [
+    "aws",
+    "cdk",
+    "cdktf",
+    "provider",
+    "terraform"
+  ],
+  "engines": {
+    "node": ">= 14.17.0"
+  },
+  "main": "lib/index.js",
+  "license": "MPL-2.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "version": "0.0.0",
+  "types": "lib/index.d.ts",
+  "stability": "stable",
+  "jsii": {
+    "outdir": "dist",
+    "targets": {
+      "go": {
+        "moduleName": "github.com/hashicorp/cdktf-provider-aws-go",
+        "packageName": "aws"
+      }
+    },
+    "tsc": {
+      "outDir": "lib",
+      "rootDir": "src"
+    }
+  }
+}
